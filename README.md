@@ -78,3 +78,6 @@ kube-master
     kube-system   nginx-proxy-node2                     1/1       Running   0          48m
     kube-system   nginx-proxy-node3                     1/1       Running   0          49m
     ```
+    
+ ### 6. 源码地址
+ [https://github.com/wiselyman/kubespray](https://github.com/wiselyman/kubespray)

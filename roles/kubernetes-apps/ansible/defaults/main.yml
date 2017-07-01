@@ -1,0 +1,43 @@
+# Versions
+kubedns_version : 1.14.1
+kubednsautoscaler_version: 1.1.1
+
+# Limits for dnsmasq/kubedns apps
+dns_memory_limit: 170Mi
+dns_cpu_requests: 100m
+dns_memory_requests: 70Mi
+kubedns_min_replicas: 1
+kubedns_nodes_per_replica: 10
+
+# Images
+kubedns_image_repo: "registry.cn-hangzhou.aliyuncs.com/google_containers/k8s-dns-kube-dns-amd64"
+kubedns_image_tag: "{{ kubedns_version }}"
+dnsmasq_nanny_image_repo: "registry.cn-hangzhou.aliyuncs.com/google_containers/k8s-dns-dnsmasq-nanny-amd64"
+dnsmasq_nanny_image_tag: "{{ kubedns_version }}"
+dnsmasq_sidecar_image_repo: "registry.cn-hangzhou.aliyuncs.com/google_containers/k8s-dns-sidecar-amd64"
+dnsmasq_sidecar_image_tag: "{{ kubedns_version }}"
+kubednsautoscaler_image_repo: "registry.cn-hangzhou.aliyuncs.com/kargo/google_containers_cluster-proportional-autoscaler-amd64"
+kubednsautoscaler_image_tag: "{{ kubednsautoscaler_version }}"
+
+# Netchecker
+deploy_netchecker: false
+netchecker_port: 31081
+agent_report_interval: 15
+netcheck_namespace: default
+agent_img: "{{ netcheck_agent_img_repo }}:{{ netcheck_agent_tag }}"
+server_img: "{{ netcheck_server_img_repo }}:{{ netcheck_server_tag }}"
+
+# Limits for netchecker apps
+netchecker_agent_cpu_limit: 30m
+netchecker_agent_memory_limit: 100M
+netchecker_agent_cpu_requests: 15m
+netchecker_agent_memory_requests: 64M
+netchecker_server_cpu_limit: 100m
+netchecker_server_memory_limit: 256M
+netchecker_server_cpu_requests: 50m
+netchecker_server_memory_requests: 64M
+
+# SSL
+etcd_cert_dir: "/etc/ssl/etcd/ssl"
+canal_cert_dir: "/etc/canal/certs"
+

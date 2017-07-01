@@ -1,6 +1,6 @@
 ## 使用kuberspay无坑安装生产级Kubernetes集群
 
-`kuberspay`是`kargo`更名后的名称，我在前面写过一篇[使用kargo快速自动化搭建kubernetes集群](http://www.wisely.top/2017/05/16/kargo-ansible-kubernetes/)，上篇文章的部署方式的缺陷还是需要科学上网，所以还是比较麻烦的。我又在另外一篇文章[无坑畅玩minikube(利用阿里云镜像编译minikube)](http://www.wisely.top/2017/06/27/no-problems-minikube/)，本文的原理与此文一致，使用阿里云里的镜像来安装Kubernetes集群，各节点的准备信息也请参考该文。
+`kuberspay`是`kargo`更名后的名称，我在前面写过一篇[使用kargo快速自动化搭建kubernetes集群](http://www.wisely.top/2017/05/16/kargo-ansible-kubernetes/)(各节点的准备信息也请参考该文)，上篇文章的部署方式的缺陷还是需要科学上网，所以还是比较麻烦的。我又在另外一篇文章[无坑畅玩minikube(利用阿里云镜像编译minikube)](http://www.wisely.top/2017/06/27/no-problems-minikube/)，本文的原理与此文一致，使用阿里云里的镜像来安装Kubernetes集群。
 
 ### 1. 安装ansible
 

@@ -202,3 +202,5 @@ node3     Ready                      3d        v1.6.1+coreos.0
   ​
 
 - 查看页面，执行`kubectl proxy`，访问`http://127.0.0.1:8001/ui`
+
+  ![https://raw.githubusercontent.com/wiselyman/kubespray/master/kubernetes-dashboard.png](https://raw.githubusercontent.com/wiselyman/kubespray/master/kubernetes-dashboard.png)

@@ -169,3 +169,36 @@ node2     Ready                      3d        v1.6.1+coreos.0
 node3     Ready                      3d        v1.6.1+coreos.0
 ```
 
+
+
+## kubenetes-dashboard安装
+
+下载描述文件
+
+- `curl https://raw.githubusercontent.com/kubernetes/dashboard/master/src/deploy/kubernetes-dashboard.yaml -o kubernetes-dashboard.yaml`
+
+- 将` gcr.io/google_containers/kubernetes-dashboard-amd64`修改为`registry.cn-hangzhou.aliyuncs.com/google_images/kubernetes-dashboard-amd64`
+
+- 执行:`kubectl create -f kubernetes-dashboard.yaml `
+
+- 查看执行结果
+
+  ```
+  wangyunfeideMBP:kubespray wangyunfei$ kubectl get pod
+  NAME                                  READY     STATUS    RESTARTS   AGE
+  kube-apiserver-node1                  1/1       Running   0          3d
+  kube-controller-manager-node1         1/1       Running   0          3d
+  kube-dns-69997447-783dz               3/3       Running   0          3d
+  kube-proxy-node1                      1/1       Running   0          3d
+  kube-proxy-node2                      1/1       Running   0          3d
+  kube-proxy-node3                      1/1       Running   0          3d
+  kube-scheduler-node1                  1/1       Running   0          3d
+  kubedns-autoscaler-2506230242-1vcgk   1/1       Running   0          3d
+  kubernetes-dashboard-27199923-qqgrq   1/1       Running   0          1m
+  nginx-proxy-node2                     1/1       Running   0          3d
+  nginx-proxy-node3                     1/1       Running   0          3d
+  ```
+
+  ​
+
+- 查看页面，执行`kubectl proxy`，访问`http://127.0.0.1:8001/ui`

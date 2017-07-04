@@ -173,9 +173,9 @@ node3     Ready                      3d        v1.6.1+coreos.0
 
 ## kubenetes-dashboard安装
 
-下载描述文件
+在上篇[使用kuberspay无坑安装生产级Kubernetes集群](http://www.wisely.top/2017/07/01/no-problem-kubernetes-kuberspay/)，在安装完成后，若需安装`kubernetes-dashboard`，请进行下面操作：
 
-- `curl https://raw.githubusercontent.com/kubernetes/dashboard/master/src/deploy/kubernetes-dashboard.yaml -o kubernetes-dashboard.yaml`
+- 下载描述文件`curl https://raw.githubusercontent.com/kubernetes/dashboard/master/src/deploy/kubernetes-dashboard.yaml -o kubernetes-dashboard.yaml`
 
 - 将` gcr.io/google_containers/kubernetes-dashboard-amd64`修改为`registry.cn-hangzhou.aliyuncs.com/google_images/kubernetes-dashboard-amd64`
 

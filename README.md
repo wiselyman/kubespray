@@ -159,4 +159,13 @@ kube-master
 
 `ansible-playbook -i inventory/inventory.cfg scripts/copy-kubeconfig.yaml`
 
-执行完成后，如果你本机的`hosts`文件已经配置了`node1`对应的ip，配置已经完成；如果没有配置，编辑`vi /Users/wangyunfei/.kube/config `，将`node1`修改为`192.168.1.130`
+执行完成后，如果你本机的`hosts`文件已经配置了`node1`对应的ip，配置已经完成；如果没有配置，编辑`vi /Users/wangyunfei/.kube/config `，将`node1`修改为`192.168.1.130`。此时再执行：
+
+```
+wangyunfeideMBP:kubespray wangyunfei$ kubectl get node
+NAME      STATUS                     AGE       VERSION
+node1     Ready,SchedulingDisabled   3d        v1.6.1+coreos.0
+node2     Ready                      3d        v1.6.1+coreos.0
+node3     Ready                      3d        v1.6.1+coreos.0
+```
+

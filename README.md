@@ -86,7 +86,7 @@ kube-master
 
 ## kubespray安装kubernetes完成后kubectl客户端配置
 
-接上篇[使用kuberspay无坑安装生产级Kubernetes集群](http://www.wisely.top/2017/07/01/no-problem-kubernetes-kuberspay/),在使用`kubespray`安装好了`kubernetes之`后，我们需要在自己的客户端电脑配置kubectl，如何将集群的配置信息在本地配置呢，我们使用下面的脚本，放在`scripts\copy-kubeconfig.yaml`下，内容为:
+接上篇[使用kuberspay无坑安装生产级Kubernetes集群](http://www.wisely.top/2017/07/01/no-problem-kubernetes-kuberspay/),在使用`kubespray`安装好了`kubernetes`之后，我们需要在自己的客户端电脑配置kubectl，如何将集群的配置信息在本地配置呢，我们使用下面的脚本，放在`scripts\copy-kubeconfig.yaml`下，内容为:
 
 ```Yaml
 ---
